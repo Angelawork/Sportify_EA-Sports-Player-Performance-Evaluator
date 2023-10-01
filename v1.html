@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EA Sports Players Performance Evaluator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 class="title">SPORTIFY</h1>
+    <form class="input" method="POST">
+        <label for="input_data">Input a player's name to see their future performance:</label>
+        <br><input type="text" id="input_data" name="input_data" required>
+        <button type="submit">Enter</button>
+    </form>
+    {% if result %}
+    <p>Result: <pre>{{ result }}</pre></p>
+    {% endif %}
+</body>
+</html>
